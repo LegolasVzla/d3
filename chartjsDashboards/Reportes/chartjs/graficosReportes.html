@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reportes Generales</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	</style>
+
+</head>
+<body>
+
+
+
+<div id="accordion">
+  <h3>Reportes Generales</h3>
+  <div>
+	<div class="container"><h4><b>Estadísticas</b></h4>
+	  <div class="row">
+	    <div class="col-sm-3">
+			<div class="panel-heading">Total Eventos de Salida</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="barchartSalidas" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+	    </div>
+	    <div class="col-sm-3">
+			<div class="panel-heading">Total Eventos Creados</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="barchartEntradas" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+	    </div>
+	    <div class="col-sm-3">
+			<div class="panel-heading">Total Cuentas Creadas</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="linechartCuentasCreadas" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+	    </div>
+	    <div class="col-sm-3">
+			<div class="panel-heading">Total Cuentas Eliminadas</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="linechartCuentasEliminadas" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-sm-3">
+			<div class="panel-heading">Alertas</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="barchartAlertas" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+	    </div>
+		<!--
+	    <div class="col-sm-3">
+			<div class="panel-heading">X</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="#" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+	    </div>
+	    <div class="col-sm-3">
+			<div class="panel-heading">Y</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="#" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+	    </div>
+	    <div class="col-sm-3">
+			<div class="panel-heading">Z</div>
+			<div class="panel-body">
+				<div class="canvas-wrapper">
+					<canvas class="main-chart" id="#" height="100%" width="100%"></canvas>
+				</div>
+			</div>
+		</div>
+		-->
+	  </div>  
+	</div>
+
+	<div class="container"><h4><b>Indicadores</b></h4>
+	  <div class="row">
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total Eventos</h4>
+					<div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total Alertas</h4>
+					<div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total Eventos Importantes</h4>
+					<div class="easypiechart" id="easypiechart-green" data-percent="92" ><span class="percent">92%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total Dispositivos de Infraestructura</h4>
+					<div class="easypiechart" id="easypiechart-red" data-percent="65" ><span class="percent">65%</span></div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total PC</h4>
+					<div class="easypiechart" id="easypiechart-grey" data-percent="92" ><span class="percent">92%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total ATM	</h4>
+					<div class="easypiechart" id="easypiechart-yellow" data-percent="65" ><span class="percent">65%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total Pos</h4>
+					<div class="easypiechart" id="easypiechart-soft-blue" data-percent="56" ><span class="percent">75%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total Servers</h4>
+					<div class="easypiechart" id="easypiechart-dark-green" data-percent="27" ><span class="percent">27%</span></div>
+				</div>
+			</div>
+		</div>
+	  </div>	  
+	</div>
+
+  </div>
+</div>
+
+<script src="./js/external/jquery/jquery.js"></script>
+<script src="./js/jquery-ui.js"></script>
+
+
+<script>
+
+$( "#accordion" ).accordion({
+  active: false,
+  collapsible: true
+});
+
+// Getter
+var collapsible = $( ".selector" ).accordion( "option", "collapsible" );
+ 
+// Setter
+$( ".selector" ).accordion( "option", "collapsible", true );
+
+</script>
+
+<script type="text/javascript">
+
+	// Jsons para el barchart de Eventos de Entrada	
+	var datos_fecha_barchart_eventos_creados = "{{ barchartDateEventosCreados }}"
+	var total_eventos_creados = "{{ totalEventosCreados }}"
+	var cantidad_eventos_creados = parseInt(total_eventos_creados)
+
+	// Jsons para el barchart de Eventos de Salida
+	var datos_fecha_barchart_eventos_salida = "{{ barchartDateEventosSalidas }}"
+	var total_eventos_salida = "{{ totalEventosSalida }}"
+	var cantidad_eventos_salida = parseInt(total_eventos_salida)
+
+	// Jsons para el linechart de Cuentas Creadas
+	var datos_fecha_linechart_cuentas_creadas = "{{ linechartDateCuentasCreadas }}"
+	var total_cuentas_creadas = "{{ totalCuentasCreadas }}"
+	var cantidad_cuentas_creadas = parseInt(total_cuentas_creadas)
+
+	// Jsons para el linechart de Cuentas Eliminadas
+	var datos_fecha_linechart_cuentas_eliminadas = "{{ linechartDateCuentasEliminadas }}"
+	var total_cuentas_eliminadas = "{{ totalCuentasEliminadas }}"
+	var cantidad_cuentas_eliminadas = parseInt(total_cuentas_eliminadas)
+
+	// Jsons para el barchart de Alertas
+	var datos_fecha_barchart_Alertas = "{{ barchartDateAlertas }}"
+	var total_alertas = "{{ totalAlertas }}"
+	var cantidad_alertas = parseInt(total_alertas)
+
+
+	//-------------Creación del Barchart de Eventos de Entrada-------------
+	
+	var barchartEntradaHeader = '{"labels" : ['
+	//var barchartEntradasData1 = barchartEntradaHeader.concat(datos_fecha_barchart_eventos_creados).split(',');
+	//console.log("array: "+ barchartEntradasData1[0]);
+
+	var arrayDate = datos_fecha_barchart_eventos_creados.split(',');
+	//console.log("array: "+ arrayDate[0]);
+	var barchartEntradasfechas= ""
+	for (var i = 0; i < arrayDate.length; i++) {
+		fechaBien=arrayDate[i].split("-")
+		aa = fechaBien[0]
+		mm = fechaBien[1]
+		dd = fechaBien[2]
+		
+		if (i == arrayDate.length-1){
+			barchartEntradasfechas += '"'+dd+'/'+mm+'/'+aa+'"';
+		}else{
+			barchartEntradasfechas += '"'+dd+'/'+mm+'/'+aa+'",';
+		}
+	}
+	//console.log("array Date completo: "+ barchartEntradasfechas);
+
+	var barchartEntradasData1 = barchartEntradaHeader.concat(barchartEntradasfechas);
+
+	var barchartEntradasData2;
+	/*
+	var barchartEntradasData2 =  '],"datasets" : [{"label": "Eventos Creados", "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)", "data" : [';
+	*/
+
+	var barchartEntradasData2 = barchartEntradasData1.concat(barchartEntradasData2)
+
+	for (var i = 0; i < cantidad_eventos_creados; i++) {		
+		if (i == (cantidad_eventos_creados-1)){
+			barchartEntradasData2+= datos_barchart_Entradas[i]+']}]}';
+		}else{
+			barchartEntradasData2+= datos_barchart_Entradas[i]+', ';	
+		}
+	}
+
+	barchartEntradasData2 = '{"labels" : ["02/01/2018","02/02/2018","02/03/2018","02/04/2018"],"datasets" : [{"label": "Eventos Creados", "data" : ["75","250","150","100"], "backgroundColor" : "#FF8000", "bordercolor" : "#FE642E" }]}';
+
+	console.log("JSON Final: "+ barchartEntradasData2);
+	result_json_barchart_entradas =JSON.parse(barchartEntradasData2);
+
+
+	//-------------Creación del Barchart de Eventos de Salida-------------
+
+	var barchartSalidaHeader = '{"labels" : ['
+	//var barchartSalidasData1 = barchartSalidaHeader.concat(datos_fecha_barchart_eventos_salida).split(',');
+	//console.log("array: "+ barchartSalidasData1[0]);
+
+	var arrayDate = datos_fecha_barchart_eventos_salida.split(',');
+	//console.log("array: "+ arrayDate[0]);
+	var barchartSalidasfechas= ""
+	for (var i = 0; i < arrayDate.length; i++) {
+		fechaBien=arrayDate[i].split("-")
+		aa = fechaBien[0]
+		mm = fechaBien[1]
+		dd = fechaBien[2]
+		
+		if (i == arrayDate.length-1){
+			barchartSalidasfechas += '"'+dd+'/'+mm+'/'+aa+'"';
+		}else{
+			barchartSalidasfechas += '"'+dd+'/'+mm+'/'+aa+'",';
+		}
+	}
+	//console.log("array Date completo: "+ barchartSalidasfechas);
+
+	var barchartSalidasData1 = barchartSalidaHeader.concat(barchartSalidasfechas);
+
+	var barchartSalidasData2;
+	/*
+	var barchartSalidasData2 =  '],"datasets" : [{"label": "Eventos Salidas", "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)", "data" : [';
+	*/
+
+	var barchartSalidasData2 = barchartSalidasData1.concat(barchartSalidasData2)
+
+	for (var i = 0; i < cantidad_eventos_salida; i++) {		
+		if (i == (cantidad_eventos_salida-1)){
+			barchartSalidasData2+= datos_barchart_salidas[i]+']}]}';
+		}else{
+			barchartSalidasData2+= datos_barchart_salidas[i]+', ';	
+		}
+	}
+
+	barchartSalidasData2 = '{"labels" : ["02/05/2018","02/06/2018","02/07/2018","02/08/2018"],"datasets" : [{"label": "Eventos Salidas",  "backgroundColor" : "#088A29", "bordercolor" : "#04B431" , "data" : ["300","225","175","200"]  }]}';
+
+	console.log("JSON Final: "+ barchartSalidasData2);
+	result_json_barchart_salidas =JSON.parse(barchartSalidasData2);
+
+	//-------------Creación del Linechart de Cuentas Creadas-------------
+
+	var barchartCuentasCreadasHeader = '{"labels" : ['
+	//var barchartSalidasData1 = barchartCuentasCreadasHeader.concat(datos_fecha_linechart_cuentas_creadas).split(',');
+	//console.log("array: "+ barchartSalidasData1[0]);
+
+	var arrayDate = datos_fecha_linechart_cuentas_creadas.split(',');
+	//console.log("array: "+ arrayDate[0]);
+	var barchartCuentasCreadasfechas= ""
+	for (var i = 0; i < arrayDate.length; i++) {
+		fechaBien=arrayDate[i].split("-")
+		aa = fechaBien[0]
+		mm = fechaBien[1]
+		dd = fechaBien[2]
+		
+		if (i == arrayDate.length-1){
+			barchartCuentasCreadasfechas += '"'+dd+'/'+mm+'/'+aa+'"';
+		}else{
+			barchartCuentasCreadasfechas += '"'+dd+'/'+mm+'/'+aa+'",';
+		}
+	}
+	//console.log("array Date completo: "+ barchartCuentasCreadasfechas);
+
+	var barchartSalidasData1 = barchartCuentasCreadasHeader.concat(barchartCuentasCreadasfechas);
+
+	var barchartCuentasData2;
+	/*
+	var barchartCuentasData2 =  '],"datasets" : [{"label": "Cuentas Creadas", "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)", "data" : [';
+	*/
+
+	var barchartCuentasData2 = barchartSalidasData1.concat(barchartCuentasData2)
+
+	for (var i = 0; i < cantidad_cuentas_creadas; i++) {		
+		if (i == (cantidad_cuentas_creadas-1)){
+			barchartCuentasData2+= datos_barchart_salidas[i]+']}]}';
+		}else{
+			barchartCuentasData2+= datos_barchart_salidas[i]+', ';	
+		}
+	}
+
+	barchartCuentasData2 = '{"labels" : ["02/05/2018","02/06/2018","02/07/2018","02/08/2018"],"datasets" : [{"label": "Cuentas Creadas", "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)", "data" : ["190","250","200","275"]  }]}';
+
+	console.log("JSON Final: "+ barchartCuentasData2);
+	result_json_linechart_cuentas_creadas =JSON.parse(barchartCuentasData2);
+
+	//-------------Creación del Linechart de Cuentas Eliminadas-------------
+
+	var barchartCuentasEliminadasHeader = '{"labels" : ['
+	//var barchartCuentasEliminadasData1 = barchartCuentasEliminadasHeader.concat(datos_fecha_linechart_cuentas_creadas).split(',');
+	//console.log("array: "+ barchartCuentasEliminadasData1[0]);
+
+	var arrayDate = datos_fecha_linechart_cuentas_creadas.split(',');
+	//console.log("array: "+ arrayDate[0]);
+	var barchartCuentasEliminadasfechas= ""
+	for (var i = 0; i < arrayDate.length; i++) {
+		fechaBien=arrayDate[i].split("-")
+		aa = fechaBien[0]
+		mm = fechaBien[1]
+		dd = fechaBien[2]
+		
+		if (i == arrayDate.length-1){
+			barchartCuentasEliminadasfechas += '"'+dd+'/'+mm+'/'+aa+'"';
+		}else{
+			barchartCuentasEliminadasfechas += '"'+dd+'/'+mm+'/'+aa+'",';
+		}
+	}
+	//console.log("array Date completo: "+ barchartCuentasEliminadasfechas);
+
+	var barchartCuentasEliminadasData1 = barchartCuentasEliminadasHeader.concat(barchartCuentasEliminadasfechas);
+
+	var barchartCuentasEliminadasData2;
+	/*
+	var barchartCuentasEliminadasData2 =  '],"datasets" : [{"label": "Cuentas Eliminadas", "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)", "data" : [';
+	*/
+
+	var barchartCuentasEliminadasData2 = barchartCuentasEliminadasData1.concat(barchartCuentasEliminadasData2)
+
+	for (var i = 0; i < cantidad_cuentas_creadas; i++) {		
+		if (i == (cantidad_cuentas_creadas-1)){
+			barchartCuentasEliminadasData2+= datos_barchart_salidas[i]+']}]}';
+		}else{
+			barchartCuentasEliminadasData2+= datos_barchart_salidas[i]+', ';	
+		}
+	}
+
+	barchartCuentasEliminadasData2 = '{"labels" : ["02/05/2018","02/06/2018","02/07/2018","02/08/2018"],"datasets" : [{"label": "Cuentas Eliminadas", "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)", "data" : ["190","200","250","225"]  }]}';
+
+	console.log("JSON Final: "+ barchartCuentasEliminadasData2);
+	result_json_linechart_cuentas_eliminadas =JSON.parse(barchartCuentasEliminadasData2);
+
+	//-------------Creación del Barchart de Alertas-------------
+
+	var barchartAlertasHeader = '{"labels" : ['
+	//var barchartAlertasData1 = barchartAlertasHeader.concat(datos_fecha_barchart_Alertas).split(',');
+	//console.log("array: "+ barchartAlertasData1[0]);
+
+	var arrayDate = datos_fecha_barchart_Alertas.split(',');
+	//console.log("array: "+ arrayDate[0]);
+	var barchartAlertasfechas= ""
+	for (var i = 0; i < arrayDate.length; i++) {
+		fechaBien=arrayDate[i].split("-")
+		aa = fechaBien[0]
+		mm = fechaBien[1]
+		dd = fechaBien[2]
+		
+		if (i == arrayDate.length-1){
+			barchartAlertasfechas += '"'+dd+'/'+mm+'/'+aa+'"';
+		}else{
+			barchartAlertasfechas += '"'+dd+'/'+mm+'/'+aa+'",';
+		}
+	}
+	//console.log("array Date completo: "+ barchartAlertasfechas);
+
+	var barchartAlertasData1 = barchartAlertasHeader.concat(barchartAlertasfechas);
+
+	var barchartAlertasData2;
+	/*
+	var barchartAlertasData2 =  '],"datasets" : [{"label": "Alertas", "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)", "data" : [';
+	*/
+
+	var barchartAlertasData2 = barchartAlertasData1.concat(barchartAlertasData2)
+
+	for (var i = 0; i < cantidad_alertas; i++) {		
+		if (i == (cantidad_alertas-1)){
+			barchartAlertasData2+= datos_barchart_salidas[i]+']}]}';
+		}else{
+			barchartAlertasData2+= datos_barchart_salidas[i]+', ';	
+		}
+	}
+
+	barchartAlertasData2 = '{"labels" : ["ATM","ATx","WINDOWS","BOVEDA","DASHBOARD"],"datasets" : [{"label": "Alertas",  "data" : ["190","250","200","275","300"], "backgroundColor" : "#01A9DB", "bordercolor" : "#0B4C5F"  }]}';
+
+	console.log("JSON Final: "+ barchartAlertasData2);
+	result_json_barchart_alertas =JSON.parse(barchartAlertasData2);
+
+	//----------------------------------------------------
+
+window.onload = function(){
+	var barchart_entradas = document.getElementById("barchartEntradas").getContext("2d");
+	window.myBar = new Chart(barchart_entradas,{
+	    type: 'bar',
+	    data: result_json_barchart_entradas,
+		responsive : true
+	});
+	var barchart_salidas = document.getElementById("barchartSalidas").getContext("2d");
+	window.myBar = new Chart(barchart_salidas,{
+	    type: 'bar',
+	    data: result_json_barchart_salidas,
+		responsive : true
+	});	
+	var linechart_cuentas_creadas = document.getElementById("linechartCuentasCreadas").getContext("2d");
+	window.myLine = new Chart(linechart_cuentas_creadas,{
+		type: 'line', 
+		data: result_json_linechart_cuentas_creadas
+	});
+	var linechart_cuentas_creadas_eliminadas = document.getElementById("linechartCuentasEliminadas").getContext("2d");
+	window.myLine = new Chart(linechart_cuentas_creadas_eliminadas,{
+		type: 'line', 
+		data: result_json_linechart_cuentas_eliminadas
+	});
+	var barchart_cuentas = document.getElementById("barchartAlertas").getContext("2d");
+	window.myBar = new Chart(barchart_cuentas,{
+	    type: 'horizontalBar',
+	    data: result_json_barchart_alertas,
+		responsive : true
+	});
+};
+</script>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/Chart.bundle.js"></script>
+<script src="./js/Chart.bundle.min.js"></script>
+<script src="./js/Chart.js"></script>
+<script src="./js/Chart.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/easypiechart.js"></script>
+<script src="./js/easypiechart-data.js"></script>
+
+
+
+</body>
+</html>
+
+</div>
+
