@@ -1,0 +1,17 @@
+.fix-bar{
+    width: 100%;
+}
+
+body {
+    
+    color: #cccccc;
+    font-family:Monospace;
+    font-size:13px;
+    text-align:left!important;
+    background-color: #000000;
+    margin: 0px;
+}
+
+img {
+    width: 35px;
+}

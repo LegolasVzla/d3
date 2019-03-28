@@ -3,19 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <!--
-    <link rel="stylesheet" href="./css/jquery-ui.css">
-  -->
-  <link rel="stylesheet" href="jquery-ui.css">
-
+  <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/jquery/jquery-ui.css">
+  <link href="./static/css/custom/dashboard.css" rel="stylesheet">
   <style>
   body{
     font-family: "Trebuchet MS", sans-serif;
     margin: 50px;
   }
   </style>
-
 </head>
 <body>
  
@@ -108,77 +104,76 @@
       <h3>Reporte 3</h3>
       <div>
 
-
-        <div class="container"><h4><b>Indicadores</b></h4>
-          <div class="row">
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total Eventos</h4>
-                <div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span></div>
+          <div class="container"><h4><b>Indicadores</b></h4>
+            <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total Eventos</h4>
+                  <div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total Alertas</h4>
-                <div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span></div>
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total Alertas</h4>
+                  <div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total Eventos Importantes</h4>
-                <div class="easypiechart" id="easypiechart-green" data-percent="92" ><span class="percent">92%</span></div>
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total Eventos Importantes</h4>
+                  <div class="easypiechart" id="easypiechart-green" data-percent="92" ><span class="percent">92%</span></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total Dispositivos de Infraestructura</h4>
-                <div class="easypiechart" id="easypiechart-red" data-percent="65" ><span class="percent">65%</span></div>
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total Dispositivos de Infraestructura</h4>
+                  <div class="easypiechart" id="easypiechart-red" data-percent="65" ><span class="percent">65%</span></div>
+                </div>
               </div>
             </div>
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total PC</h4>
-                <div class="easypiechart" id="easypiechart-grey" data-percent="92" ><span class="percent">92%</span></div>
+            </div>
+            <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total PC</h4>
+                  <div class="easypiechart" id="easypiechart-grey" data-percent="92" ><span class="percent">92%</span></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total ATM </h4>
-                <div class="easypiechart" id="easypiechart-yellow" data-percent="65" ><span class="percent">65%</span></div>
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total ATM </h4>
+                  <div class="easypiechart" id="easypiechart-yellow" data-percent="65" ><span class="percent">65%</span></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total Pos</h4>
-                <div class="easypiechart" id="easypiechart-soft-blue" data-percent="56" ><span class="percent">75%</span></div>
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total Pos</h4>
+                  <div class="easypiechart" id="easypiechart-soft-blue" data-percent="56" ><span class="percent">75%</span></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <div class="panel panel-default">
-              <div class="panel-body easypiechart-panel">
-                <h4>Total Servers</h4>
-                <div class="easypiechart" id="easypiechart-dark-green" data-percent="27" ><span class="percent">27%</span></div>
+            <div class="col-xs-6 col-md-3">
+              <div class="panel panel-default">
+                <div class="panel-body easypiechart-panel">
+                  <h4>Total Servers</h4>
+                  <div class="easypiechart" id="easypiechart-dark-green" data-percent="27" ><span class="percent">27%</span></div>
+                </div>
               </div>
             </div>
+            </div>    
           </div>
-          </div>    
-        </div>
 
         </div>
     </div>
@@ -191,219 +186,23 @@
     -->  
   </div>
  
-  <script src="./js/jquery-1.12.4.js"></script>
-  <script src="./js/ui/1.12.1/jquery-ui.js"></script>
-
-  <script>
-  $( function() {
-    var icons = {
-      header: "ui-icon-circle-triangle-e",
-      activeHeader: "ui-icon-circle-triangle-s"
-    };
-    $( "#accordion" )
-      .accordion({
-        header: "> div > h3",
-        icons: icons,
-        active: false,
-        collapsible: true
-      })
-      .sortable({
-        axis: "y",
-        handle: "h3",
-        stop: function( event, ui ) {
-          // IE doesn't register the blur when sorting
-          // so trigger focusout handlers to remove .ui-state-focus
-          ui.item.children( "h3" ).triggerHandler( "focusout" );
+  <script src="./static/js/jquery/jquery-1.12.4.js"></script>
+  <script src="./static/js/jquery/ui/1.12.1/jquery-ui.js"></script>
  
-          // Refresh accordion to handle new order
-          $( this ).accordion( "refresh" );
-        }
-      });
-      // Getter
-      var collapsible = $( ".selector" ).accordion( "option", "collapsible" );
-       
-      // Setter
-      $( ".selector" ).accordion( "option", "collapsible", true );
+  <!-- Dashboard -->
+  <script src="./static/js/charts/Chart.js"></script>
+  <script src="./static/js/charts/Chart.bundle.js"></script>
+  <script src="./static/js/charts/Chart.bundle.min.js"></script>
+  <script src="./static/js/charts/Chart.min.js"></script>
+  <script src="./static/js/charts/easypiechart.js"></script>
+  <script src="./static/js/charts/easypiechart-data.js"></script>
 
-  } );
-  </script>
-
-<script type="text/javascript">
-
-  //-------------Barchart de Eventos de Entrada-------------
-  
-  var barchartEntradaHeader = '{"labels" : '
-
-  //var barchartEntradasfechas = "{{ barchartFechasEventosCreados }}"
-  var barchartEntradasfechas = '["2016-12-11","2015-12-04","2014-08-14","2017-01-23","2016-04-04"]'
-
-  var barchartEntradasData1 = barchartEntradaHeader.concat(barchartEntradasfechas);
-
-  var barchartEntradaBody = ',"datasets" : [{"label": "Eventos Creados", "data" :'
-
-  var barchartEntradasData1 = barchartEntradasData1.concat(barchartEntradaBody);
-
-  // var barchartEntradasData2 = "{{ barchartDatosEventosCreados }}"
-  var barchartEntradasData2 = '[115,192,84,81,194,100,150]'
-
-  var barchartEntradasData1 = barchartEntradasData1.concat(barchartEntradasData2);
-
-  var barchartEntradasEnd = ', "backgroundColor" : "#FF8000", "bordercolor" : "#FE642E" }]}'
-
-  var barchartEntradasData1 = barchartEntradasData1.concat(barchartEntradasEnd);
-
-  //console.log("JSON Final: "+ barchartEntradasData1);
-  result_json_barchart_entradas =JSON.parse(barchartEntradasData1);
-
-  //-------------Barchart de Eventos de Salida-------------
-
-  var barchartSalidaHeader = '{"labels" : '
-
-  //var barchartSalidasfechas = "{{ barchartFechasEventosSalida }}"
-  var barchartSalidasfechas = '["2018-11-17","2018-12-07","2018-08-12","2017-12-01","2015-03-11","2014-07-07","2016-02-18"]'
-
-  var barchartSalidasData1 = barchartSalidaHeader.concat(barchartSalidasfechas);
-
-  var barchartSalidaBody = ',"datasets" : [{"label": "Eventos de Salida", "data" :'
-
-  var barchartSalidasData1 = barchartSalidasData1.concat(barchartSalidaBody);
-
-  // var barchartSalidasData2 = "{{ barchartDatosEventosSalida }}"
-  var barchartSalidasData2 = '[98,135,185,112,90,180,115]'
-
-  var barchartSalidasData1 = barchartSalidasData1.concat(barchartSalidasData2);
-
-  var barchartSalidasEnd = ', "backgroundColor" : "#088A29", "bordercolor" : "#04B431" }]}'
-
-  var barchartSalidasData1 = barchartSalidasData1.concat(barchartSalidasEnd);
-
-  //console.log("JSON Final: "+ barchartSalidasData1);
-  result_json_barchart_salidas =JSON.parse(barchartSalidasData1);
-
-  //-------------Linechart de Cuentas Creadas-------------
-
-  var linechartCuentasCreadasHeader = '{"labels" : '
-
-  //var linechartCuentasCreadasfechas = "{{ barchartFechasCuentasCreadas }}"
-  var linechartCuentasCreadasfechas = '["2016-02-18","2017-12-12","2015-08-27","2018-03-21","2017-11-07","2015-12-02","2015-09-07"]'
-
-  var linechartCuentasCreadasData1 = linechartCuentasCreadasHeader.concat(linechartCuentasCreadasfechas);
-
-  var linechartCuentasCreadasBody = ',"datasets" : [{"label": "Cuentas Creadas", "data" :'
-
-  var linechartCuentasCreadasData1 = linechartCuentasCreadasData1.concat(linechartCuentasCreadasBody);
-
-  // var linechartCuentasCreadasData2 = "{{ barchartDatosCuentasCreadas }}"
-  var linechartCuentasCreadasData2 = '[84,118,165,187,107,100,150]'
-
-  var linechartCuentasCreadasData1 = linechartCuentasCreadasData1.concat(linechartCuentasCreadasData2);
-
-  var linechartCuentasCreadasEnd = ', "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)" }]}'
-
-  var linechartCuentasCreadasData1 = linechartCuentasCreadasData1.concat(linechartCuentasCreadasEnd);
-
-  //console.log("JSON Final: "+ linechartCuentasCreadasData1);
-  result_json_linechart_cuentas_creadas =JSON.parse(linechartCuentasCreadasData1);
-
-  //-------------Linechart de Cuentas Eliminadas-------------
-
-  var linechartCuentasEliminadasHeader = '{"labels" : '
-
-  //var linechartCuentasEliminadasfechas = "{{ barchartFechasCuentasEliminadas }}"
-  var linechartCuentasEliminadasfechas = '["2018-09-06","2016-07-23","2016-12-18","2017-01-28","2018-07-23","2016-08-13","2015-08-16"]'
-
-  var linechartCuentasEliminadasData1 = linechartCuentasEliminadasHeader.concat(linechartCuentasEliminadasfechas);
-
-  var linechartCuentasEliminadasBody = ',"datasets" : [{"label": "Cuentas Eliminadas", "data" :'
-
-  var linechartCuentasEliminadasData1 = linechartCuentasEliminadasData1.concat(linechartCuentasEliminadasBody);
-
-  // var linechartCuentasEliminadasData2 = "{{ barchartDatosCuentasEliminadas }}"
-  var linechartCuentasEliminadasData2 = '[172,92,109,162,78,150,125]'
-
-  var linechartCuentasEliminadasData1 = linechartCuentasEliminadasData1.concat(linechartCuentasEliminadasData2);
-
-  var linechartCuentasEliminadasEnd = ', "fillColor" : "rgba(48, 164, 255, 0.2)", "strokeColor" : "rgba(48, 164, 255, 1)", "pointColor" : "rgba(48, 164, 255, 1)", "pointStrokeColor" : "#fff", "pointHighlightFill" : "#fff", "pointHighlightStroke" : "rgba(48, 164, 255, 1)" }]}'
-
-  var linechartCuentasEliminadasData1 = linechartCuentasEliminadasData1.concat(linechartCuentasEliminadasEnd);
-
-  //console.log("JSON Final: "+ linechartCuentasEliminadasData1);
-  result_json_linechart_cuentas_eliminadas =JSON.parse(linechartCuentasEliminadasData1);
-
-  //-------------Barchart de Alertas-------------
-
-  var barchartAlertasHeader = '{"labels" : '
-
-  //var barchartAlertasfechas = "{{ barchartFechasAlertas }}"
-  var barchartAlertasfechas = '["2019-01-06","2014-12-13","2015-11-19","2018-02-24","2016-11-26"]'
-
-  var barchartAlertasData1 = barchartAlertasHeader.concat(barchartAlertasfechas);
-
-  var barchartAlertasBody = ',"datasets" : [{"label": "Alertas", "data" :'
-
-  var barchartAlertasData1 = barchartAlertasData1.concat(barchartAlertasBody);
-
-  // var barchartAlertasData2 = "{{ barchartDatosAlertas }}"
-  var barchartAlertasData2 = '[160,140,126,156,94]'
-
-  var barchartAlertasData1 = barchartAlertasData1.concat(barchartAlertasData2);
-
-  var barchartAlertasEnd = ', "backgroundColor" : "#01A9DB", "bordercolor" : "#0B4C5F" }]}'
-
-  var barchartAlertasData1 = barchartAlertasData1.concat(barchartAlertasEnd);
-
-  //console.log("JSON Final: "+ barchartAlertasData1);
-  result_json_barchart_alertas =JSON.parse(barchartAlertasData1);
-
-  //----------------------------------------------------
-
-window.onload = function(){
-  var barchart_entradas = document.getElementById("barchartEntradas").getContext("2d");
-  window.myBar = new Chart(barchart_entradas,{
-      type: 'bar',
-      data: result_json_barchart_entradas,
-    responsive : true
-  });
-  var barchart_salidas = document.getElementById("barchartSalidas").getContext("2d");
-  window.myBar = new Chart(barchart_salidas,{
-      type: 'bar',
-      data: result_json_barchart_salidas,
-    responsive : true
-  }); 
-  var linechart_cuentas_creadas = document.getElementById("linechartCuentasCreadas").getContext("2d");
-  window.myLine = new Chart(linechart_cuentas_creadas,{
-    type: 'line', 
-    data: result_json_linechart_cuentas_creadas
-  });
-  var linechart_cuentas_creadas_eliminadas = document.getElementById("linechartCuentasEliminadas").getContext("2d");
-  window.myLine = new Chart(linechart_cuentas_creadas_eliminadas,{
-    type: 'line', 
-    data: result_json_linechart_cuentas_eliminadas
-  });
-  var barchart_cuentas = document.getElementById("barchartAlertas").getContext("2d");
-  window.myBar = new Chart(barchart_cuentas,{
-      type: 'horizontalBar',
-      data: result_json_barchart_alertas,
-    responsive : true
-  });
-};
-</script>
-
-
-<!--- 
-<script src="./js/external/jquery/jquery.js"></script>
-<script src="./js/jquery-ui.js"></script>
-<script src="./js/jquery.min.js"></script>
--->
-
-  <script src="./js/Chart.bundle.js"></script>
-  <script src="./js/Chart.bundle.min.js"></script>
-  <script src="./js/Chart.js"></script>
-  <script src="./js/Chart.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/easypiechart.js"></script>
-  <script src="./js/easypiechart-data.js"></script>
-
+  <script src="./static/js/custom/dashboard/customAccordionDashboard.js"></script>
+  <script src="./static/js/custom/dashboard/outputEventBarChart.js"></script>
+  <script src="./static/js/custom/dashboard/inputEventBarChart.js"></script>
+  <script src="./static/js/custom/dashboard/createdAccountsLineChart.js"></script>
+  <script src="./static/js/custom/dashboard/deletedAccountsLineChart.js"></script>
+  <script src="./static/js/custom/dashboard/alertBarChart.min.js"></script>
 
 </body>
 </html>
